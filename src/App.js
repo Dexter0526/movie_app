@@ -1,50 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const movieILike = [
-  {
-    id: 1,
-    fav: "액션",
-    rating: 4.5,
-  },
-  {
-    id: 2,
-    fav: "드라마",
-    rating: 4.2,
-  },
-  {
-    id: 3,
-    fav: "호러",
-    rating: 4.3,
-  },
-];
+class App extends React.Component {
+  state = {
+    count: 0
+  };
 
-function Movie({ fav, rating }) {
-  return (
-    <div>
-      <h2>I like {fav}</h2>
-      <h4>{rating} / 5.0</h4>
-    </div>
-  );
-}
+  add = () => {
+    console.log("add");
+  };
+  minus = () => {
+    console.log("minus");
+  };
 
-Movie.propTypes = {
-  fav: PropTypes.string.isRequired,
-  rating: PropTypes.number
-}
-
-// function Movie_Name({ fav }) {
-//   return <h2>I like {fav}</h2>;
-// }
-
-function App() {
-  return (
-    <div>
-      {movieILike.map((item) => (
-        <Movie key={item.id} fav={item.fav} rating={item.rating} />
-      ))}
-    </div>
-  );
+  render() {
+    return (
+      <div>
+        <h1>Im a class {this.state.count}</h1>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    );
+  }
 }
 
 export default App;
