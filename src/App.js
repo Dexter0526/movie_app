@@ -20,7 +20,16 @@ class App extends React.Component {
     this.setState({count: 0});
   }
 
+  componentDidMount(){
+    console.log("Component did mount");
+  }
+
+  componentDidUpdate(){
+    console.log("Component did upate");
+  }
+
   render() {
+    console.log("Render");
     return (
       <div>
         <h1>The number is {this.state.count}</h1>
