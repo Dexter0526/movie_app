@@ -12,6 +12,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
@@ -40,5 +41,4 @@
     ]
   },
   "homepage": "https://Dexter0526.github.io/movie_app/"
-  
 }
